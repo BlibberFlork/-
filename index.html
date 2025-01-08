@@ -5,21 +5,35 @@
 <body>
     <script>
         document.addEventListener("keypress", function(map) {
-  if (map.key === "1") {
-    window.open("https://fontawesome.com/icons", "_blank");
+  if (map.key === "") {
+    window.open("", "_blank");
   }
 });
         document.addEventListener("keypress", function(map) {
-  if (map.key === "2") {
-    window.open("https://vscode.dev/", "_blank");
+  if (map.key === "") {
+    window.open("", "_blank");
   }
 });
         document.addEventListener("keypress", function(map) {
-  if (map.key === "3") {
-    window.open("https://www.w3schools.com/", "_blank");
+  if (map.key === "") {
+    window.open("", "_blank");
   }
 });
+
+
+
+	    // Function to add a bookmark
+function addBookmark(title, url) {
+    let bookmarks = JSON.parse(localStorage.getItem('bookmarks')) || [];
+    bookmarks.push({ title, url });
+    localStorage.setItem('bookmarks', JSON.stringify(bookmarks));
+}
+
+// Example usage
+addBookmark('Google', 'https://www.google.com');
+
             </script>
+	
     <style>
         * {
             cursor: url('RedGlow.cur'), auto;
